@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './sections/Navbar';
 import Footer from './sections/Footer';
 import Background from './components/Background';
+import Wrapper from './sections/Wrapper';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Background />
       <div className="app">
         <Navbar />
+        <Wrapper />
         <Footer />
       </div>
     </div>
