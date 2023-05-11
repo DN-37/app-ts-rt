@@ -1,0 +1,24 @@
+nav {
+    display: grid;
+    grid-template-columns: 5rem auto 5rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.203);
+
+    .block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #e21b5a;
+
+        svg {
+            cursor: pointer;
+            font-size: 2.5rem;
+        }
+    }
+
+    .data {
+        margin: 0px;
+        border: 0.5px solid rgba(255, 255, 255, 0.203);
+        border-top: none;
+        border-bottom: none;
+    }
+}
