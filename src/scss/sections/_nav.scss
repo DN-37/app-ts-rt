@@ -54,3 +54,24 @@ nav {
         }
     }
 }
+
+.underline {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    height: var(--underline-height);
+    width: 20%;
+    background-color: var(--accent-color);
+    pointer-events: none;
+    transition: transform var(--transition-duration) ease-in-out;
+
+    &:nth-child(1) {
+        transition: calc(var(--transition-duration) * 0.8);
+    }
+
+    &:nth-child(2) {
+        transition: calc(var(--transition-duration) * 1.2);
+    }
+}
