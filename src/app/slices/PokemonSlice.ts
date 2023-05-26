@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getInitialPokemonData } from "../reducers/getInitialPokemonData";
-import { PokemonTypeInitialState } from '../../utils/Types';
+import { PokemonTypeInitialState } from '../../utils/types';
 
 const initialState: PokemonTypeInitialState = {
     allPokemon: undefined,
