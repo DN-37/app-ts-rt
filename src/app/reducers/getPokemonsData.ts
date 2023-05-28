@@ -43,6 +43,9 @@ export const getPokemonsData = createAsyncThunk(
                     types,
                 });
             }
-        } catch (err) { }
+            return pokemonsData;
+        } catch (err) {
+            console.error(err);
+        }
     }
 );
