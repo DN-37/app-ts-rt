@@ -23,9 +23,29 @@ function Search() {
         }
     }, [allPokemon, dispatch])
 
+    const getPokemon = async (value: string) => {
+        if (value.length) {
+            const pokemons = allPokemon?.filter((pokemon) =>
+                pokemon.name.includes(value.toLowerCase())
+            );
+            dispatch(getPokemonsData(pokemons!));
+        } else {
+            const clonedPokemons = [...(allPokemon as [])];
+            const randomPokemonsId = clonedPokemons
+                .sort(() => Math.random() - Math.random())
+                .slice(0, 20);
+            dispatch(getPokemonsData(randomPokemonsId));
+        }
+    };
+
     return (
         <div className='search'>
-            <input type='text' name='' id='' />
+            <input
+                type="text"
+                onChange={(e) => getPokemon(e.target.value)}
+                className="pokemon-searchbar"
+                placeholder="Search Pokemon"
+            />
             <PokemonCardGrid pokemons={randomPokemons!} />
         </div>
     )
