@@ -1,8 +1,11 @@
-export interface AppTypeInitialState { }
+export interface AppTypeInitialState {
+    toasts: string[];
+}
 
 export interface PokemonTypeInitialState {
     allPokemon: undefined | genericPokemonType[];
     randomPokemons: generatedPokemonType[] | undefined;
+    compareQueue: generatedPokemonType[];
 }
 
 export interface genericPokemonType {
